@@ -20,4 +20,10 @@
 //     toast.error(error.message || "Client Error");
 //   }
 // };
-// export default errorHandle;
+
+
+const errorHandle = () => {
+  return 
+}
+
+export default errorHandle

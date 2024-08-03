@@ -19,6 +19,8 @@ import { useDocTitle } from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import Login from './pages/Login';
 
+import AdminRoutes from './pages/admin/AdminRoutes';
+
 function App() {
 
   useEffect(() => {
@@ -35,7 +37,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("LCS | LCS - Bespoke Web and Mobile Applications");
+  useDocTitle("GreenTech - Bespoke Web and Mobile Applications");
 
 
 
@@ -63,16 +65,17 @@ function App() {
                 </PublicRoutes>
               }
             />
+            <Route path="/admin/*" element={<AdminRoutes />} />
             {/* <Route path="/EnquiryForm  " element={<DemoProduct />} /> */}
 
             <Route
-          path="/Login"
-          element={
-            <PublicRoutes restricted>
-              <Login />
-            </PublicRoutes>
-          }
-        />
+              path="/Login"
+              element={
+                <PublicRoutes restricted>
+                  <Login />
+                </PublicRoutes>
+              }
+            />
 
 
           </Routes>

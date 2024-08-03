@@ -5,7 +5,7 @@ const Card = ({title, desc, btnText, btnLink="/"}) => {
     return (
         <div className="bg-white transition-all ease-in-out duration-400   text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3 min-h-48">
             <div className=" lg:mx-4 mx-2">
-            <h3 className=" font-semibold my-4 text-lg md:text-2xl text-center"><span className='font-black'>{title}</span></h3>
+            <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4">{title}</h4>
             <div>
                 <p className='mtext-md font-medium leading-5 py-4 md:py-8 xl:py-12'>
                     {desc}

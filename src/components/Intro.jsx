@@ -15,11 +15,11 @@ const Intro = () => {
                             
                             <h3 className="text-3xl  text-lime-600 font-bold">Our Parent Company</h3>
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>Our team is well vast in software development and is ready to help develop the applications of your choice.</p>
+                                <p className='my-3 lg:text-xl text-lg text-gray-600 font-semibold'>Our team is well vast in software development and is ready to help develop the applications of your choice.</p>
                             </div>
                             
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>Our parent company, IMA S.p.A. is a world leader in the design and manufacture of automatic machines for the processing and packaging of pharmaceuticals, cosmetics, tea and coffee. It has made significant investment in R&D and has filed over 1,000 patents worldwide. Its product range caters to tea bagging and coffee pod machines, solid dose manufacturing, sterile processing equipment, liquid filling, freeze-drying, labeling, blistering, counting, tube filling, cartoning and end-of-line machines.</p>
+                                <p className='my-3 lg:text-xl text-lg text-gray-600 font-semibold'>Our parent company, IMA S.p.A. is a world leader in the design and manufacture of automatic machines for the processing and packaging of pharmaceuticals, cosmetics, tea and coffee. It has made significant investment in R&D and has filed over 1,000 patents worldwide. Its product range caters to tea bagging and coffee pod machines, solid dose manufacturing, sterile processing equipment, liquid filling, freeze-drying, labeling, blistering, counting, tube filling, cartoning and end-of-line machines.</p>
                             </div>
                             <Link to="/contact" className="text-white bg-lime-600 hover:bg-sky-600 inline-flex items-center justify-center w-full px-6 py-2 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 group">
                             To know more, kindly visit www.ima.it

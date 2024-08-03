@@ -8,7 +8,7 @@ const CardWithIcon = ({ icon, title, desc }) => {
             </div>
             <h3 className="text-3xl  text-lime-600 font-semibold"><span className='font-black'>{title}</span></h3>
             <div>
-                <p className='my-3 text-xl text-gray-600 font-semibold'>
+                <p className='my-3 md:text-xl text-gray-600 font-semibold'>
                     {desc}
                 </p>
             </div>

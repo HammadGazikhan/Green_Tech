@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
@@ -18,13 +19,16 @@
     "dotenv": "^16.4.5",
     "embla-carousel-autoplay": "^8.1.7",
     "embla-carousel-react": "^8.1.7",
+    "formik": "^2.4.6",
     "lucide-react": "^0.417.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.25.1",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yap": "^0.0.2",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
