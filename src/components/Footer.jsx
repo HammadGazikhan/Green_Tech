@@ -172,7 +172,7 @@ const Footer = () => {
                   <li>
                     <Link
                       to="#"
-                      className="flex justify-center items-center text-lime-600 hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                      className="flex justify-center items-center text-lime-600 hover:text-sky-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
                       aria-label="Twitter"
                     >
                       <svg
@@ -187,7 +187,7 @@ const Footer = () => {
                   <li className="ml-4">
                     <Link
                       to="#"
-                      className="flex justify-center items-center text-lime-600 hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                      className="flex justify-center items-center text-lime-600 hover:text-sky-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
                       aria-label="Facebook"
                     >
                       <svg
@@ -206,10 +206,10 @@ const Footer = () => {
 
           <div className="flex flex-wrap items-center md:justify-between justify-center mx-auto px-4">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center py-2">
-              <div className="text-sm text-gray-200 font-semibold py-1">
+              <div className="text-sm text-gray-600 font-semibold py-1">
                 Copyright &copy; {new Date().getFullYear()}
                 {"  "}
-                <Link to="#" className=" hover:text-gray-900">
+                <Link to="/" className=" text-sky-600 hover:text-lime-600">
                   LCS & Green
                 </Link>
                 . All rights reserved.

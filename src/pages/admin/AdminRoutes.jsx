@@ -29,7 +29,7 @@ const AdminRoutes = () => {
             <Route
                 path="/products"
                 element={
-                    <AdminLayout title="Carousel">
+                    <AdminLayout title="Products">
                         <ProductList/>
                     </AdminLayout>  
                 }

@@ -43,7 +43,7 @@ const Hero = () => {
             <div className="hero" id='hero'>
 
 
-                <div className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
+                <div className="m-auto overflow-hidden md:mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
                     <Carousel setApi={setApi} plugins={[
                         Autoplay({
                             delay: 5500,
@@ -51,9 +51,9 @@ const Hero = () => {
                     ]} >
                         <CarouselContent className="h-full my-12">
 
-                            {rows.map((row, index) => (
-                                <CarouselItem key={index} className="flex justify-center align-middle content-center">
-                                    <img src={row.image} alt="" className=" " />
+                            {rows?.map((row, index) => (
+                                <CarouselItem key={index} className="flex justify-center align-middle content-center" style={{height: '75vh'}}>
+                                    <img src={row.image} alt="" className=" "  />
                                 </CarouselItem>
                             ))}
 

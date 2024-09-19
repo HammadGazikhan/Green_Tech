@@ -20,8 +20,8 @@ const AdminLayout = ({ children, title = "Admin" }) => {
     <div>
       <div className="p-4  gap-5 shadow-md flex justify-between">
         <div className="flex flex-row h-fit">
-          <Link to="/">
-            <img src={Logo} className="h-16 w-24" alt="Logo" />
+        <Link to="/">
+            <img src={Logo} className="h-16 w-28 md:h-24 md:w-36" alt="Logo" />
           </Link>
           <h1 className="text-xl font-semibold px-4 my-auto">{title}</h1>
         </div>
@@ -38,7 +38,13 @@ const AdminLayout = ({ children, title = "Admin" }) => {
           <Link className="px-4 font-extrabold text-gray-500 hover:text-lime-600" to="/admin/carousel">
             Carousel
           </Link>
-          <div className="relative">
+          <button
+                className="px-4 font-extrabold text-gray-500 hover:text-red-600"
+                onClick={Logout}
+              >
+                Log Out
+              </button>
+          {/* <div className="relative">
             <button
               id={`dropdownNavbarLinkProfile`}
               data-dropdown-toggle={`dropdownNavbarProfile`}
@@ -80,7 +86,8 @@ const AdminLayout = ({ children, title = "Admin" }) => {
               >
                 Log Out
               </button>
-            </div></div>
+            </div>
+            </div> */}
         </div>
       </div>
 

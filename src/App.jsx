@@ -11,7 +11,8 @@ import {
 // All pages
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import DemoProduct from './pages/DemoProduct';
+import Support from './pages/Support';
+import Solution from './pages/Solution';
 import AuthState from "./context/authContext/AuthState";
 import PublicRoutes from "./utils/PublicRoutes";
 import PrivateRoutes from "./utils/PrivateRoutes";
@@ -20,6 +21,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Login from './pages/Login';
 
 import AdminRoutes from './pages/admin/AdminRoutes';
+import Products from './pages/Products';
 
 function App() {
 
@@ -58,6 +60,14 @@ function App() {
               }
             />
             <Route
+              path="/products"
+              element={
+                <PublicRoutes>
+                  <Products />
+                </PublicRoutes>
+              }
+            />
+            <Route
               path="/ContactUs"
               element={
                 <PublicRoutes>
@@ -65,8 +75,24 @@ function App() {
                 </PublicRoutes>
               }
             />
+            <Route
+              path="/support"
+              element={
+                <PublicRoutes>
+                  <Support />
+                </PublicRoutes>
+              }
+            />
+            <Route
+              path="/solution"
+              element={
+                <PublicRoutes>
+                  <Solution />
+                </PublicRoutes>
+              }
+            />
             <Route path="/admin/*" element={<AdminRoutes />} />
-            {/* <Route path="/EnquiryForm  " element={<DemoProduct />} /> */}
+            {/* <Route path="/EnquiryForm  " element={<Support />} /> */}
 
             <Route
               path="/Login"
@@ -76,7 +102,6 @@ function App() {
                 </PublicRoutes>
               }
             />
-
 
           </Routes>
 

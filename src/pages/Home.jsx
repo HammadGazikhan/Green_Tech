@@ -41,7 +41,7 @@ const cardData = [
 const Home = () => {
     return (
         <Layout >
-            <div className="2xl:px-60 xl:px-16">
+            <div className="2xl:px-60 mt-10 xl:px-16">
                 <Hero />
 
                 <Intro />

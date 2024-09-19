@@ -6,7 +6,7 @@
 //       toast.error(`401 Unauthorized User`);
 //       localStorage.removeItem("token");
 //       localStorage.removeItem("userObj");
-//       window.location.replace(`${process.env.REACT_APP_FE_URL}/sign-in`);
+//       window.location.replace(`${process.env.API_URL}/sign-in`);
 //     } else if (error?.response?.status === 500) {
 //       const msg =
 //         typeof error?.response?.data.msg === "object"
