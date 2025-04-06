@@ -5,13 +5,12 @@ const Footer = () => {
   return (
     <>
       <footer className="mt-12 md:-mt-16 xl:mt-24">
-
         <div className="footer mt-8 2xl:px-60 xl:px-16 max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-30">
           <div className="my-10 mx-5 ">
             <div className="box-border border-b-4 border-lime-600 p-4 bg-gray-200 text-gray-600 text-center rounded-lg  mx-auto">
               <iframe
                 title="Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27313.91640241993!2d73.90375886959743!3d18.471876327881052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea76f4fd68e3%3A0xcac9c2a9349894f8!2sRuby%20Hall%20Clinic%2C%20Wanowrie!5e0!3m2!1sen!2sin!4v1702019243337!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1892.3083227578627!2d73.8937686551263!3d18.45570699640453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI3JzIwLjYiTiA3M8KwNTMnNDEuOCJF!5e0!3m2!1sen!2sin!4v1729770534680!5m2!1sen!2sin"
                 className="w-full h-64"
                 allowFullScreen=""
                 loading="lazy"
@@ -165,7 +164,6 @@ const Footer = () => {
             {/* 5th block */}
             <div className="col-span-12 text-center mx-auto  font-bold uppercase text-lime-600">
               <div className="text-xl mb-6">Social Media Links.</div>
-
 
               <div className="mx-auto text-center mt-2">
                 <ul className="flex justify-center mb-4 md:mb-0">

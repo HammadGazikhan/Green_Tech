@@ -1,7 +1,7 @@
-import React, { Fragment, useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
-import AuthContext from "../../context/authContext/AuthContext";
+// import AuthContext from "../../context/authContext/AuthContext";
 
 const navListMenuItemsSupport = [
   {
@@ -35,20 +35,18 @@ const navListMenuItemsSupport = [
   //   link: "/Training",
   // },
 ];
-const navListMenuAdminOptions = [
-  {
-    title: "Admin",
-    description: "Admin dashboard",
-    link: "/admin/products",
-  },
-  {
-    title: "Log Out",
-    description: "Log out of your account",
-    link: "",
-  },
-];
-
-
+// const navListMenuAdminOptions = [
+//   {
+//     title: "Admin",
+//     description: "Admin dashboard",
+//     link: "/admin/products",
+//   },
+//   {
+//     title: "Log Out",
+//     description: "Log out of your account",
+//     link: "",
+//   },
+// ];
 
 const dropMenuNavList = {
   Support: navListMenuItemsSupport,
@@ -57,7 +55,7 @@ const dropMenuNavList = {
 
 const NavLinks = () => {
   const [dropdownOpen, setDropdownOpen] = useState({});
-  const { Logout, isLogin } = useContext(AuthContext);
+  // const { Logout, isLogin } = useContext(AuthContext);
 
   // const toggleDropdown = (key) => {
   //   setDropdownOpen((prevState) => ({
@@ -91,13 +89,14 @@ const NavLinks = () => {
       {/* <Link className="px-4 font-extrabold text-gray-500 hover:text-lime-600" to="/About">
         About
       </Link> */}
-      <Link className="px-4 font-extrabold text-gray-500 hover:text-lime-600" to="/products">
+      <Link
+        className="px-4 font-extrabold text-gray-500 hover:text-lime-600"
+        to="/products"
+      >
         Products
       </Link>
 
-
-
-      {Object.entries(dropMenuNavList).map(([key, items], index) => (
+      {/* {Object.entries(dropMenuNavList).map(([key, items], index) => (
         <div key={index} className="relative">
           <button
             id={`dropdownNavbarLink${index}`}
@@ -107,8 +106,9 @@ const NavLinks = () => {
           >
             {key}
             <svg
-              className={`w-2.5 h-2.5 ms-2.5 transition-transform ${dropdownOpen[`dropdown${index}`] ? "rotate-180" : ""
-                }`}
+              className={`w-2.5 h-2.5 ms-2.5 transition-transform ${
+                dropdownOpen[`dropdown${index}`] ? "rotate-180" : ""
+              }`}
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -124,12 +124,16 @@ const NavLinks = () => {
             </svg>
           </button>
           <div
-            className={`${dropdownOpen[`dropdown${index}`] ? "block" : "hidden"
-              } fixed inset-x-0 mt-2 md:mt-4 lg:mt-8 p-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-2/3 lg:w-1/2 grid grid-cols-2 mx-auto lg:ms-auto lg:me-2`}
+            className={`${
+              dropdownOpen[`dropdown${index}`] ? "block" : "hidden"
+            } fixed inset-x-0 mt-2 md:mt-4 lg:mt-8 p-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-2/3 lg:w-1/2 grid grid-cols-2 mx-auto lg:ms-auto lg:me-2`}
             style={{ zIndex: 100 }}
           >
             {items.map((item, itemIndex) => (
-              <div key={itemIndex} className="py-1 col-span-3 lg:col-span-1 text-center">
+              <div
+                key={itemIndex}
+                className="py-1 col-span-3 lg:col-span-1 text-center"
+              >
                 <Link
                   to={item.link}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
@@ -141,13 +145,16 @@ const NavLinks = () => {
             ))}
           </div>
         </div>
-      ))}
-      
-      <Link className="px-4 font-extrabold text-gray-500 hover:text-lime-600" to="/ContactUs">
+      ))} */}
+
+      <Link
+        className="px-4 font-extrabold text-gray-500 hover:text-lime-600"
+        to="/ContactUs"
+      >
         ContactUs
       </Link>
 
-      {isLogin ? (
+      {/* {isLogin ? (
         <div className="relative">
           <button
             id={`dropdownNavbarLinkProfile`}
@@ -195,14 +202,21 @@ const NavLinks = () => {
         <Link className="px-4 font-extrabold text-gray-500 hover:text-lime-600" to="/login">
           Login
         </Link>
-      )}
+      )} */}
 
       <Link
+        className="px-4 font-extrabold text-gray-500 hover:text-lime-600"
+        to="/AboutUs"
+      >
+        AboutUs
+      </Link>
+
+      {/* <Link
         className="text-white bg-lime-600 hover:bg-sky-600 inline-flex items-center justify-center w-auto px-6 py-3 shadow-xl rounded-xl"
         to="/ContactUs"
       >
         Enquiry
-      </Link>
+      </Link> */}
     </div>
   );
 };
@@ -222,7 +236,10 @@ const NavBar = () => {
   }, [top]);
 
   return (
-    <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-18 ${!top && "bg-white shadow-lg"}`}>
+    <nav
+      className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-18 bg-white
+        ${!top && "bg-white shadow-lg"}`}
+    >
       <div className="flex flex-row justify-between items-center py-2">
         <div className="flex flex-row justify-center md:px-12 md:mx-12 items-start">
           <Link to="/">
@@ -257,7 +274,9 @@ const NavBar = () => {
             <NavLinks />
           </div>
           <div
-            className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md py-8 bg-white lg:hidden shadow-xl top-24 ${isOpen ? "block" : "hidden"}`}
+            className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md py-8 bg-white lg:hidden shadow-xl top-24 ${
+              isOpen ? "block" : "hidden"
+            }`}
           >
             <div className="flex flex-col space-y-6">
               <NavLinks />
@@ -270,18 +289,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const navListMenuItemsAbout = [
 //   {

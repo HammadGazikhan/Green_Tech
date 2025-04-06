@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
 
 const navListMenuItemsSupport = [
   {
@@ -107,12 +106,11 @@ const dropMenuNavList = {
   Products: navListMenuItems,
 };
 
-
 const NavLinks = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  // const [navbarOpen, setNavbarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({});
 
-  const toggleNavbar = () => setNavbarOpen(!navbarOpen);
+  // const toggleNavbar = () => setNavbarOpen(!navbarOpen);
 
   const toggleDropdown = (key) => {
     setDropdownOpen((prevState) => {
@@ -124,59 +122,8 @@ const NavLinks = () => {
     });
   };
 
-  const renderNavLinks = (items) => {
-    return items.map((item, index) => (
-      <div key={index} className="relative">
-        <button
-          id={`dropdownNavbarLink${index}`}
-          data-dropdown-toggle={`dropdownNavbar${index}`}
-          className="flex items-center px-4 font-extrabold text-gray-500 hover:text-lime-600"
-          onClick={() => toggleDropdown(`dropdown${index}`)}
-        >
-          {item.title}
-          <svg
-            className={`w-2.5 h-2.5 ms-2.5 transition-transform ${
-              dropdownOpen[`dropdown${index}`] ? "rotate-180" : ""
-            }`}
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m1 1 4 4 4-4"
-            />
-          </svg>
-        </button>
-        <div
-          className={`${
-            dropdownOpen[`dropdown${index}`] ? "block" : "hidden"
-          } fixed inset-x-0 mt-2 md:mt-4 lg:mt-5  p-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-full`}
-          style={{ zIndex: 100 }}
-        >
-          <div className="py-1 grid grid-cols-3">
-            <Link
-              to={item.link}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 col-span-1 w-full"
-            >
-              {item.title}
-            </Link>
-            <p>{item.description}</p>
-          </div>
-        </div>
-      </div>
-    ));
-  };
-
-
   return (
     <div className=" flex lg:flex-row flex-col lg:items-center text-left  gap-3">
-      
-      
       {Object.entries(dropMenuNavList).map(([key, items], index) => (
         <div key={index} className="relative">
           <button
@@ -217,7 +164,7 @@ const NavLinks = () => {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                 >
                   {item.title}
-                <p className="text-xs">{item.description}</p>
+                  <p className="text-xs">{item.description}</p>
                 </Link>
               </div>
             ))}
